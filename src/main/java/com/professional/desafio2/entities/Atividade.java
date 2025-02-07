@@ -11,7 +11,7 @@ public class Atividade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String nome;
 
     @Column(columnDefinition = "TEXT")
     private String descricao;
@@ -30,9 +30,9 @@ public class Atividade {
     public Atividade() {
     }
 
-    public Atividade(Long id, String name, String descricao, Double preco) {
+    public Atividade(Long id, String nome, String descricao, Double preco) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
     }
@@ -45,12 +45,12 @@ public class Atividade {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getDescricao() {
@@ -90,7 +90,7 @@ public class Atividade {
     public String toString() {
         return "Atividade{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", preco=" + preco +
                 '}';
